@@ -74,4 +74,46 @@ end
 `save <FILENAME> <MATRIX_VAR_NAME> -ascii`
 
 > [!Example] > `save my_matrix.dat mat -ascii`
-> this will save a matrix called mat to a file named my_matrix.dat
+> this will save a matrix called mat to a file named my_matrix.dat in plain text
+
+> [!Example] > `save my_matrix.dat mat -ascii -append`
+> this will append to the .dat file in the form of plain text
+
+## How to read from a file
+
+> [!NOTE]
+> reading a file uses the load command
+
+`load my_matrix.dat`
+
+Files can be loaded with denominators in them, eg commas, these will be loaded as matrix with spaces as the deliminator
+
+# Lower level I/O
+
+## fopen
+
+`fid = fopen("FILENAME", "PERMISSION")`
+PERMISSION can be either `w`, `r`, or `a`
+
+> [!Example]
+>
+> ```matlab
+> fid = fopen("PI_text.txt", "r")
+> fid =
+>      3
+> ```
+
+## fscanf
+
+```matlab
+data = fscanf(fid, "%f, %f", [2, inf]);
+```
+
+## fgetl
+
+> [!NOTE]
+> gets line from fid
+
+```matlab
+fgetl(fid)
+```
