@@ -79,6 +79,8 @@ Data comes from everywhere
 
 - Using big data to detect potential health risks before they even happen
 
+----------
+
 | Benefits                           | Negatives                                   |
 | ---------------------------------- | ------------------------------------------- |
 | preventative                       | reactive                                    |
