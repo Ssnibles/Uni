@@ -8,11 +8,11 @@ function  <OUTPUT> = <FUNCTION_NAME>(<INPUT>)
     % Calculate something
     % Format of call: <FUNCTION_NAME>(<INPUT>)
 
-    <OUTPUT> = <SOME_CALCULATION>
+    <OUTPUT> = <INPUT> * <INPUT> / <INPUT> % will store the calculation in the <OUTPUT>
 end
 ```
 
-## Example of a function:
+## Example of a function
 
 ```matlab
 function area = circle_radius(radius)
@@ -23,7 +23,7 @@ function area = circle_radius(radius)
 end
 ```
 
-## Run functions:
+## Run functions
 
 `circle_radius(5)`
 

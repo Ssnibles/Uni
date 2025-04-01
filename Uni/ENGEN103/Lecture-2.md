@@ -1,4 +1,4 @@
-# Row Vectors:
+# Row Vectors
 
 ```matlab
 vec = [0, 1, 2, 3]
@@ -22,7 +22,7 @@ vec =
         0 0 0 0 0 0 0 0
 ```
 
-# Column Vectors:
+# Column Vectors
 
 ```matlab
 cv = [1; 2; 3; 4]
@@ -44,7 +44,7 @@ mat =
 
 Use ; to indicate a new row
 
-## Accessing a Specific Row and Column:
+## Accessing a Specific Row and Column
 
 Element = matrix (row, column)
 
