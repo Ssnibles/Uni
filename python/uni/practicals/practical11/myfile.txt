@@ -1,3 +1,1 @@
-This is the first line
-Second line
-Last line
+First lineSecond LineLast Line
