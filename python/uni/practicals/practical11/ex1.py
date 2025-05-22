@@ -1,0 +1,16 @@
+# f = open("myfile.txt", "w")
+# f.write("This is the first line")
+# f.write("Second line")
+# f.write("Last line")
+# f.close()
+#
+# f = open("myfile.txt", "w")
+# print("This is the first line", file=f)
+# print("Second line", file=f)
+# print("Last line", file=f)
+# f.close()
+
+f = open("myfile.txt", "r")
+data = f.read()
+print(data)
+f.close()
