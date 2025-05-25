@@ -1,30 +1,43 @@
-# Write all to one line
 f = open("myfile.txt", "w")
 f.write("First line")
-f.write("Second Line")
-f.write("Last Line")
+f.write("Second line")
+f.write("Third line")
 f.close()
 
-f = open("myfile2.txt", "w")
-print("First line", file=f)
-print("Second line", file=f)
-print("Third line", file=f)
+# Create File in the ./files/
+f = open("./files/myfile.txt", "w")
+f.write("Bleh\n")
+f.write("Second line\n")
+f.write("Third line\n")
+f.write("Fourth line\n")
 f.close()
 
+# Create File in the ./files/
+f = open("./files/myfile", "w")
+f.write("Bleh\n")
+f.write("Second line\n")
+f.write("Third line\n")
+f.write("Fourth line\n")
+f.close()
+
+# Still works without f.close()
+f = open("./files/myfile2.txt", "w")
+f.write("Bleh\n")
+f.write("Second line\n")
+f.write("Third line\n")
+f.write("Fourth line\n")
+
+# Open file in read mode
 f = open("myfile.txt", "r")
 data = f.read()
 print(data)
+print(len(data))
+print(type(data))
 f.close()
 
-# Read and print from each file
 f = open("myfile.txt", "r")
 for data in f:
+    data = data.strip("\n")
     print(data)
+print(type(data))
 f.close()
-data = data.strip("\n")
-
-f = open("myfile2.txt", "r")
-for data in f:
-    print(data)
-f.close()
-data = data.strip("\n")
