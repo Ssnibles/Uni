@@ -16,7 +16,7 @@ with open("./planets.csv", mode="r") as file:
         gravity = mass / radius**2  # Calculate gravity
 
         # Prepare the output string
-        output = f"Planet: {name} | Mass: {mass} | Radius: {radius} | Gravity:{gravity: .3g}\n"
+        output = f"Planet: {name} | Mass: {mass} | Radius: {radius} | Gravity:{gravity:.3g}\n"
 
         print(output, end="")  # Print to the screen
 

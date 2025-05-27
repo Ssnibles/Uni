@@ -1,5 +1,0 @@
-Planet: Venus | Mass: 0.81 | Radius: 0.95 | Gravity: 0.898
-Planet: Mars | Mass: 0.11 | Radius: 0.53 | Gravity: 0.392
-Planet: Jupiter | Mass: 329.0 | Radius: 11.2 | Gravity: 2.62
-Planet: Neptune | Mass: 17.2 | Radius: 3.8 | Gravity: 1.19
-Planet: Sun | Mass: 332775.0 | Radius: 109.0 | Gravity: 28

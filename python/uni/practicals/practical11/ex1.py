@@ -13,18 +13,25 @@ f.close()
 
 f = open("myfile.txt", "r")
 data = f.read()
+print(len(data))
 print(data)
 f.close()
 
 # Read and print from each file
 f = open("myfile.txt", "r")
 for data in f:
+    data = data.strip("\n")
     print(data)
 f.close()
-data = data.strip("\n")
 
+total = 0
 f = open("myfile2.txt", "r")
 for data in f:
+    data = data.strip("\n")
     print(data)
+    total += len(data)
 f.close()
-data = data.strip("\n")
+print(total)
+
+print(type(data))
+print(len(data))
