@@ -3,6 +3,8 @@ import statistics
 
 dif_list = []
 
+one = 1
+
 with open("./steel.csv", mode="r", newline="") as file:
     data = csv.reader(file)
     header = next(data)  # Skip header row if present

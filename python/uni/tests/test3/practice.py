@@ -49,7 +49,7 @@ print(f"Number of failing FSEN Engineering students: {failing_count}")
 # Prepare data for plotting: x positions and grade counts
 x = np.arange(len(grade_order))  # Numeric positions for each grade
 fsen_counts = [fsen_grades[grade] for grade in grade_order]  # FSEN BE(HONS) grade counts
-other_counts = [other_grades[grade] for grade in grade_order]  # Other students' grade counts
+other_counts = [other_grades[grade] for grade in grade_order]  # Other students grade counts
 
 bar_width = 0.4  # Width of each bar in the bar chart
 
