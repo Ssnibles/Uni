@@ -1,3 +1,3 @@
 import numpy as np  # import numpy as np
 
-print(np.array([1, 2, 3, 4]))
+print(np.mean(np.array([100, 80, 72, 68, 72])))
