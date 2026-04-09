@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
 
@@ -15,6 +16,9 @@ class Assignment1
     // Create an empty list of print requests
     printList list = new();
 
+    private static Semaphore Capacity = new Semaphore(5, 5);
+    private static Semaphore Items = new Semaphore(0, 5);
+
     internal printList List
     {
         get => list;
@@ -26,10 +30,23 @@ class Assignment1
     public void StartSimulation()
     {
         // ArrayList to keep for machine and printer threads
-        List<Thread> mThreads = new List<Thread>();
-        List<Thread> pThreads = new List<Thread>();
+        List<Thread> mThreads = [];
+        List<Thread> pThreads = [];
 
         // Create Machine and Printer threads
+        for (int i = 0; i < NUM_PRINTERS; i++)
+        {
+            Thread t = new Thread(new MachineThread(this, i).SetMachine);
+            mThreads.Add(t);
+            t.Start();
+        }
+
+        for (int i = 0; i < NUM_MACHINES; i++)
+        {
+            Thread t = new Thread(new PrinterThread(this, i).SetPrinter);
+            pThreads.Add(t);
+            t.Start();
+        }
 
         // start the machine threads
 
@@ -41,7 +58,11 @@ class Assignment1
         // finish simulation
         sim_active = false;
 
-        // Wait until all printer threads finish by using the joining them
+        // Wait until all printer threads finish by using the join method
+        foreach (var Thread in pThreads)
+        {
+            Thread.Join();
+        }
     }
 
     // Printer class
@@ -109,6 +130,7 @@ class Assignment1
                 MachineSleep();
 
                 // machine wakes up and sends a print request
+                IsRequestSafe(id);
             }
         }
 
@@ -144,7 +166,6 @@ class Assignment1
             int sleepSeconds =
                 1
                 + (int)(new Random(Guid.NewGuid().GetHashCode()).NextDouble() * MAX_MACHINE_SLEEP);
-
             try
             {
                 Thread.Sleep(sleepSeconds * 1000);

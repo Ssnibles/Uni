@@ -4,14 +4,16 @@
 
 pkgs.mkShell {
   buildInputs = with pkgs; [
-    dotnet-sdk_8
-    omnisharp-roslyn
-    netcoredbg
+    mono
+    dotnet-sdk_10
   ];
 
   shellHook = ''
-    echo "COMPX234 C# / .NET 8 environment loaded"
-    export DOTNET_ROOT="${pkgs.dotnet-sdk_8}";
-    export PATH="${pkgs.dotnet-sdk_8}/bin:$PATH"
+    echo "COMPX201 Development Environment Loaded"
+    export DOTNET_ROOT="${pkgs.dotnet-sdk_10}"
+    export PATH="$PATH:$HOME/.dotnet/tools"
+    export MONO_HOME="${pkgs.mono}"
+    echo "dotnet: $(dotnet --version)"
+    echo "mono: $(mono --version | head -n 1)"
   '';
 }

@@ -23,7 +23,7 @@ export DOTNET_SKIP_FIRST_TIME_EXPERIENCE
 DOTNET_SKIP_WORKLOAD_INTEGRITY_CHECK='1'
 export DOTNET_SKIP_WORKLOAD_INTEGRITY_CHECK
 HOSTTYPE='x86_64'
-HOST_PATH='/nix/store/6pzjf0fyhylla6l7j3q8cc49wpcrfxdj-dotnet-sdk-wrapped-8.0.419/bin:/nix/store/6d0qkpwbagpjbh55k12c65ak2hmn79z9-omnisharp-roslyn-1.39.14/bin:/nix/store/jzl40bj71m4png1qjk6s81hwv7dv7l8g-netcoredbg-3.1.2-1054/bin:/nix/store/vzx1mi9c0xfadmsm9dhd83d005cb1qs9-coreutils-9.8/bin:/nix/store/7vl12if4xsjwx8ccl90qjx2r0z6acqlj-findutils-4.10.0/bin:/nix/store/i53xmvs8bz7sjyhqp3wl83pw25j86hc9-diffutils-3.12/bin:/nix/store/cajg449qn174z6lckd5nl3f6j4qf0j6h-gnused-4.9/bin:/nix/store/ph2lki556zck2g99ngzy2f451ly9pvy4-gnugrep-3.12/bin:/nix/store/warr9dcy6aw1hhgzccadq6ldvmjnn10k-gawk-5.3.2/bin:/nix/store/df3vxyq7lwf9l02h0wljsq0h3189rp75-gnutar-1.35/bin:/nix/store/dv49sc8jjw07mp9ns7m2m63dl96r1j84-gzip-1.14/bin:/nix/store/4dw28arywjzgjv86bdclcq0dqv5y0jp8-bzip2-1.0.8-bin/bin:/nix/store/3zcs23yc1wbjkmd7s1fp7dncvy17dhr3-gnumake-4.4.1/bin:/nix/store/wv8bpzriikv65xnd1vciqpq7rnr8h2q2-bash-5.3p3/bin:/nix/store/ghy5v6b9sghzmvimsc3z5szia69p0v3f-patch-2.8/bin:/nix/store/x3ycwj97ca9kma36a02a4h5n2rri64rp-xz-5.8.1-bin/bin:/nix/store/035z9lfb8330g10pv137084h9n42j84h-file-5.45/bin'
+HOST_PATH='/nix/store/mplsx4v8988iaa3pdbgyb3j53hfzbs0k-mono-6.14.1/bin:/nix/store/qpl9mj0qvcwqmlz38mjcqgahlkc6041m-dotnet-sdk-wrapped-10.0.201/bin:/nix/store/vzx1mi9c0xfadmsm9dhd83d005cb1qs9-coreutils-9.8/bin:/nix/store/7vl12if4xsjwx8ccl90qjx2r0z6acqlj-findutils-4.10.0/bin:/nix/store/i53xmvs8bz7sjyhqp3wl83pw25j86hc9-diffutils-3.12/bin:/nix/store/cajg449qn174z6lckd5nl3f6j4qf0j6h-gnused-4.9/bin:/nix/store/ph2lki556zck2g99ngzy2f451ly9pvy4-gnugrep-3.12/bin:/nix/store/warr9dcy6aw1hhgzccadq6ldvmjnn10k-gawk-5.3.2/bin:/nix/store/df3vxyq7lwf9l02h0wljsq0h3189rp75-gnutar-1.35/bin:/nix/store/dv49sc8jjw07mp9ns7m2m63dl96r1j84-gzip-1.14/bin:/nix/store/4dw28arywjzgjv86bdclcq0dqv5y0jp8-bzip2-1.0.8-bin/bin:/nix/store/3zcs23yc1wbjkmd7s1fp7dncvy17dhr3-gnumake-4.4.1/bin:/nix/store/wv8bpzriikv65xnd1vciqpq7rnr8h2q2-bash-5.3p3/bin:/nix/store/ghy5v6b9sghzmvimsc3z5szia69p0v3f-patch-2.8/bin:/nix/store/x3ycwj97ca9kma36a02a4h5n2rri64rp-xz-5.8.1-bin/bin:/nix/store/035z9lfb8330g10pv137084h9n42j84h-file-5.45/bin'
 export HOST_PATH
 IFS=' 	
 '
@@ -47,13 +47,13 @@ NIX_CC='/nix/store/kilyfvfmh9x9rlaj47ph1916lbc1pnsr-gcc-wrapper-14.3.0'
 export NIX_CC
 NIX_CC_WRAPPER_TARGET_HOST_x86_64_unknown_linux_gnu='1'
 export NIX_CC_WRAPPER_TARGET_HOST_x86_64_unknown_linux_gnu
-NIX_CFLAGS_COMPILE=' -frandom-seed=prcg2mmq5c'
+NIX_CFLAGS_COMPILE=' -frandom-seed=i6y7a69fqn -isystem /nix/store/mplsx4v8988iaa3pdbgyb3j53hfzbs0k-mono-6.14.1/include -isystem /nix/store/mplsx4v8988iaa3pdbgyb3j53hfzbs0k-mono-6.14.1/include'
 export NIX_CFLAGS_COMPILE
 NIX_ENFORCE_NO_NATIVE='1'
 export NIX_ENFORCE_NO_NATIVE
 NIX_HARDENING_ENABLE='bindnow format fortify fortify3 libcxxhardeningextensive libcxxhardeningfast pic relro stackclashprotection stackprotector strictoverflow zerocallusedregs'
 export NIX_HARDENING_ENABLE
-NIX_LDFLAGS='-rpath /home/josh/Uni/COMPX234/outputs/out/lib '
+NIX_LDFLAGS='-rpath /home/josh/Uni/COMPX234/outputs/out/lib  -L/nix/store/mplsx4v8988iaa3pdbgyb3j53hfzbs0k-mono-6.14.1/lib -L/nix/store/mplsx4v8988iaa3pdbgyb3j53hfzbs0k-mono-6.14.1/lib'
 export NIX_LDFLAGS
 NIX_NO_SELF_RPATH='1'
 NIX_STORE='/nix/store'
@@ -68,7 +68,7 @@ OLDPWD=''
 export OLDPWD
 OPTERR='1'
 OSTYPE='linux-gnu'
-PATH='/nix/store/wz8vwkh35989vygvf5ygwiy0189k43s8-patchelf-0.15.2/bin:/nix/store/kilyfvfmh9x9rlaj47ph1916lbc1pnsr-gcc-wrapper-14.3.0/bin:/nix/store/06409a3d2d3b1113zdk9rm5a3ns4rizz-gcc-14.3.0/bin:/nix/store/jbmmanvw6drvsrq723s3n9qqsdwfd1bl-glibc-2.40-218-bin/bin:/nix/store/vzx1mi9c0xfadmsm9dhd83d005cb1qs9-coreutils-9.8/bin:/nix/store/hnan7l0v68sahyxbazz5y358prz253d1-binutils-wrapper-2.44/bin:/nix/store/i839kg98izahkn1iq17sn3wliliic7pm-binutils-2.44/bin:/nix/store/6pzjf0fyhylla6l7j3q8cc49wpcrfxdj-dotnet-sdk-wrapped-8.0.419/bin:/nix/store/6d0qkpwbagpjbh55k12c65ak2hmn79z9-omnisharp-roslyn-1.39.14/bin:/nix/store/jzl40bj71m4png1qjk6s81hwv7dv7l8g-netcoredbg-3.1.2-1054/bin:/nix/store/vzx1mi9c0xfadmsm9dhd83d005cb1qs9-coreutils-9.8/bin:/nix/store/7vl12if4xsjwx8ccl90qjx2r0z6acqlj-findutils-4.10.0/bin:/nix/store/i53xmvs8bz7sjyhqp3wl83pw25j86hc9-diffutils-3.12/bin:/nix/store/cajg449qn174z6lckd5nl3f6j4qf0j6h-gnused-4.9/bin:/nix/store/ph2lki556zck2g99ngzy2f451ly9pvy4-gnugrep-3.12/bin:/nix/store/warr9dcy6aw1hhgzccadq6ldvmjnn10k-gawk-5.3.2/bin:/nix/store/df3vxyq7lwf9l02h0wljsq0h3189rp75-gnutar-1.35/bin:/nix/store/dv49sc8jjw07mp9ns7m2m63dl96r1j84-gzip-1.14/bin:/nix/store/4dw28arywjzgjv86bdclcq0dqv5y0jp8-bzip2-1.0.8-bin/bin:/nix/store/3zcs23yc1wbjkmd7s1fp7dncvy17dhr3-gnumake-4.4.1/bin:/nix/store/wv8bpzriikv65xnd1vciqpq7rnr8h2q2-bash-5.3p3/bin:/nix/store/ghy5v6b9sghzmvimsc3z5szia69p0v3f-patch-2.8/bin:/nix/store/x3ycwj97ca9kma36a02a4h5n2rri64rp-xz-5.8.1-bin/bin:/nix/store/035z9lfb8330g10pv137084h9n42j84h-file-5.45/bin'
+PATH='/nix/store/wz8vwkh35989vygvf5ygwiy0189k43s8-patchelf-0.15.2/bin:/nix/store/kilyfvfmh9x9rlaj47ph1916lbc1pnsr-gcc-wrapper-14.3.0/bin:/nix/store/06409a3d2d3b1113zdk9rm5a3ns4rizz-gcc-14.3.0/bin:/nix/store/jbmmanvw6drvsrq723s3n9qqsdwfd1bl-glibc-2.40-218-bin/bin:/nix/store/vzx1mi9c0xfadmsm9dhd83d005cb1qs9-coreutils-9.8/bin:/nix/store/hnan7l0v68sahyxbazz5y358prz253d1-binutils-wrapper-2.44/bin:/nix/store/i839kg98izahkn1iq17sn3wliliic7pm-binutils-2.44/bin:/nix/store/mplsx4v8988iaa3pdbgyb3j53hfzbs0k-mono-6.14.1/bin:/nix/store/qpl9mj0qvcwqmlz38mjcqgahlkc6041m-dotnet-sdk-wrapped-10.0.201/bin:/nix/store/vzx1mi9c0xfadmsm9dhd83d005cb1qs9-coreutils-9.8/bin:/nix/store/7vl12if4xsjwx8ccl90qjx2r0z6acqlj-findutils-4.10.0/bin:/nix/store/i53xmvs8bz7sjyhqp3wl83pw25j86hc9-diffutils-3.12/bin:/nix/store/cajg449qn174z6lckd5nl3f6j4qf0j6h-gnused-4.9/bin:/nix/store/ph2lki556zck2g99ngzy2f451ly9pvy4-gnugrep-3.12/bin:/nix/store/warr9dcy6aw1hhgzccadq6ldvmjnn10k-gawk-5.3.2/bin:/nix/store/df3vxyq7lwf9l02h0wljsq0h3189rp75-gnutar-1.35/bin:/nix/store/dv49sc8jjw07mp9ns7m2m63dl96r1j84-gzip-1.14/bin:/nix/store/4dw28arywjzgjv86bdclcq0dqv5y0jp8-bzip2-1.0.8-bin/bin:/nix/store/3zcs23yc1wbjkmd7s1fp7dncvy17dhr3-gnumake-4.4.1/bin:/nix/store/wv8bpzriikv65xnd1vciqpq7rnr8h2q2-bash-5.3p3/bin:/nix/store/ghy5v6b9sghzmvimsc3z5szia69p0v3f-patch-2.8/bin:/nix/store/x3ycwj97ca9kma36a02a4h5n2rri64rp-xz-5.8.1-bin/bin:/nix/store/035z9lfb8330g10pv137084h9n42j84h-file-5.45/bin'
 export PATH
 PS4='+ '
 RANLIB='ranlib'
@@ -91,7 +91,7 @@ __structuredAttrs=''
 export __structuredAttrs
 declare -A _nugetInputs=()
 _substituteStream_has_warned_replace_deprecation='false'
-buildInputs='/nix/store/6pzjf0fyhylla6l7j3q8cc49wpcrfxdj-dotnet-sdk-wrapped-8.0.419 /nix/store/6d0qkpwbagpjbh55k12c65ak2hmn79z9-omnisharp-roslyn-1.39.14 /nix/store/jzl40bj71m4png1qjk6s81hwv7dv7l8g-netcoredbg-3.1.2-1054'
+buildInputs='/nix/store/mplsx4v8988iaa3pdbgyb3j53hfzbs0k-mono-6.14.1 /nix/store/qpl9mj0qvcwqmlz38mjcqgahlkc6041m-dotnet-sdk-wrapped-10.0.201'
 export buildInputs
 buildPhase='{ echo "------------------------------------------------------------";
   echo " WARNING: the existence of this path is not guaranteed.";
@@ -169,7 +169,7 @@ declare -a pkgsBuildBuild=()
 declare -a pkgsBuildHost=('/nix/store/wz8vwkh35989vygvf5ygwiy0189k43s8-patchelf-0.15.2' '/nix/store/rzy7aqkzhw1jwnkvqzxw84qsjpq0vx5c-update-autotools-gnu-config-scripts-hook' '/nix/store/0y5xmdb7qfvimjwbq7ibg1xdgkgjwqng-no-broken-symlinks.sh' '/nix/store/cv1d7p48379km6a85h4zp6kr86brh32q-audit-tmpdir.sh' '/nix/store/85clx3b0xkdf58jn161iy80y5223ilbi-compress-man-pages.sh' '/nix/store/wgrbkkaldkrlrni33ccvm3b6vbxzb656-make-symlinks-relative.sh' '/nix/store/5yzw0vhkyszf2d179m0qfkgxmp5wjjx4-move-docs.sh' '/nix/store/fyaryjvghbkpfnsyw97hb3lyb37s1pd6-move-lib64.sh' '/nix/store/kd4xwxjpjxi71jkm6ka0np72if9rm3y0-move-sbin.sh' '/nix/store/pag6l61paj1dc9sv15l7bm5c17xn5kyk-move-systemd-user-units.sh' '/nix/store/cmzya9irvxzlkh7lfy6i82gbp0saxqj3-multiple-outputs.sh' '/nix/store/x8c40nfigps493a07sdr2pm5s9j1cdc0-patch-shebangs.sh' '/nix/store/cickvswrvann041nqxb0rxilc46svw1n-prune-libtool-files.sh' '/nix/store/xyff06pkhki3qy1ls77w10s0v79c9il0-reproducible-builds.sh' '/nix/store/z7k98578dfzi6l3hsvbivzm7hfqlk0zc-set-source-date-epoch-to-latest.sh' '/nix/store/pilsssjjdxvdphlg2h19p0bfx5q0jzkn-strip.sh' '/nix/store/kilyfvfmh9x9rlaj47ph1916lbc1pnsr-gcc-wrapper-14.3.0' '/nix/store/hnan7l0v68sahyxbazz5y358prz253d1-binutils-wrapper-2.44' )
 declare -a pkgsBuildTarget=()
 declare -a pkgsHostHost=()
-declare -a pkgsHostTarget=('/nix/store/6pzjf0fyhylla6l7j3q8cc49wpcrfxdj-dotnet-sdk-wrapped-8.0.419' '/nix/store/rjs51vbr816akhnypr4985y0hia6nhli-nuget-package-hook' '/nix/store/6d0qkpwbagpjbh55k12c65ak2hmn79z9-omnisharp-roslyn-1.39.14' '/nix/store/jzl40bj71m4png1qjk6s81hwv7dv7l8g-netcoredbg-3.1.2-1054' )
+declare -a pkgsHostTarget=('/nix/store/mplsx4v8988iaa3pdbgyb3j53hfzbs0k-mono-6.14.1' '/nix/store/qpl9mj0qvcwqmlz38mjcqgahlkc6041m-dotnet-sdk-wrapped-10.0.201' '/nix/store/rjs51vbr816akhnypr4985y0hia6nhli-nuget-package-hook' )
 declare -a pkgsTargetTarget=()
 declare -a postFixupHooks=('noBrokenSymlinksInAllOutputs' '_makeSymlinksRelativeInAllOutputs' '_multioutPropagateDev' 'createNugetSource' )
 declare -a postUnpackHooks=('_updateSourceDateEpochFromSourceRoot' )
@@ -188,9 +188,12 @@ export propagatedNativeBuildInputs
 declare -a propagatedTargetDepFiles=('propagated-target-target-deps' )
 shell='/nix/store/wv8bpzriikv65xnd1vciqpq7rnr8h2q2-bash-5.3p3/bin/bash'
 export shell
-shellHook='echo "COMPX234 C# / .NET 8 environment loaded"
-export DOTNET_ROOT="/nix/store/6pzjf0fyhylla6l7j3q8cc49wpcrfxdj-dotnet-sdk-wrapped-8.0.419";
-export PATH="/nix/store/6pzjf0fyhylla6l7j3q8cc49wpcrfxdj-dotnet-sdk-wrapped-8.0.419/bin:$PATH"
+shellHook='echo "COMPX201 Development Environment Loaded"
+export DOTNET_ROOT="/nix/store/qpl9mj0qvcwqmlz38mjcqgahlkc6041m-dotnet-sdk-wrapped-10.0.201"
+export PATH="$PATH:$HOME/.dotnet/tools"
+export MONO_HOME="/nix/store/mplsx4v8988iaa3pdbgyb3j53hfzbs0k-mono-6.14.1"
+echo "dotnet: $(dotnet --version)"
+echo "mono: $(mono --version | head -n 1)"
 '
 export shellHook
 stdenv='/nix/store/sgz04vy3x5cvg9kqq9vlm93qi1n2pb6k-stdenv-linux'
