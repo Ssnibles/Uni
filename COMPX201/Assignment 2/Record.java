@@ -32,4 +32,25 @@ public class Record {
   public String getTitle() {
     return title;
   }
+
+  // Override toString method to return a string representation of the record
+  @Override
+  public String toString() {
+    return String.format("%s, %s, %s, %s", genre, year, artist, title);
+  }
+
+  public String compareTo(Record other) {
+    if (this.genre.equals(other.genre)
+        && this.year.equals(other.year)
+        && this.artist.equals(other.artist)
+        && this.title.equals(other.title)) {
+      return "after";
+    } else if (this.genre.equals(other.genre)
+        && this.year.equals(other.year)
+        && this.artist.equals(other.artist)) {
+      return "before";
+    } else {
+      return "before";
+    }
+  }
 }
