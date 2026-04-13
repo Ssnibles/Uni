@@ -39,18 +39,27 @@ public class Record {
     return String.format("%s, %s, %s, %s", genre, year, artist, title);
   }
 
-  public String compareTo(Record other) {
-    if (this.genre.equals(other.genre)
-        && this.year.equals(other.year)
-        && this.artist.equals(other.artist)
-        && this.title.equals(other.title)) {
-      return "after";
-    } else if (this.genre.equals(other.genre)
-        && this.year.equals(other.year)
-        && this.artist.equals(other.artist)) {
-      return "before";
-    } else {
-      return "before";
+  /**
+   * Method to compare this record with another record. Returns "after" if this record is the same
+   * as the other record, "before" if this record is different from the other record.
+   */
+  public int compareTo(Record other) {
+    int genreCompare = this.genre.compareTo(other.genre);
+    if (genreCompare != 0) {
+      return genreCompare;
     }
+
+    // Compare years as integers to ensure correct ordering
+    int yearCompare = Integer.compare(Integer.parseInt(this.year), Integer.parseInt(other.year));
+    if (yearCompare != 0) {
+      return yearCompare;
+    }
+
+    int artistCompare = this.artist.compareTo(other.artist);
+    if (artistCompare != 0) {
+      return artistCompare;
+    }
+
+    return this.title.compareTo(other.title);
   }
 }
