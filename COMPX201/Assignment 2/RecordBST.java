@@ -1,6 +1,19 @@
 /** RecordBST */
 public class RecordBST {
 
+  // Class for the nodes of the BST
+  public class Node {
+    Record record;
+    Node left;
+    Node right;
+
+    public Node(Record record) {
+      this.record = record;
+      this.left = null;
+      this.right = null;
+    }
+  }
+
   private Node record;
 
   public RecordBST() {
@@ -8,35 +21,35 @@ public class RecordBST {
   }
 
   public void insert(Record record) {
-    this.record = insertHelper(this.record, record);
+    this.record = insertR(this.record, record);
   }
 
-  private Node insertHelper(Node node, Record record) {
+  private Node insertR(Node node, Record record) {
     if (node == null) {
       return new Node(record);
     }
     int cmp = record.compareTo(node.record);
     if (cmp < 0) {
-      node.left = insertHelper(node.left, record);
+      node.left = insertR(node.left, record);
     } else if (cmp > 0) {
-      node.right = insertHelper(node.right, record);
+      node.right = insertR(node.right, record);
     }
     return node;
   }
 
   public void remove(Record record) {
-    this.record = removeHelper(this.record, record);
+    this.record = removeR(this.record, record);
   }
 
-  private Node removeHelper(Node node, Record record) {
+  private Node removeR(Node node, Record record) {
     if (node == null) {
       return null;
     }
     int cmp = record.compareTo(node.record);
     if (cmp < 0) {
-      node.left = removeHelper(node.left, record);
+      node.left = removeR(node.left, record);
     } else if (cmp > 0) {
-      node.right = removeHelper(node.right, record);
+      node.right = removeR(node.right, record);
     } else {
       if (node.left == null) {
         return node.right;
@@ -45,7 +58,7 @@ public class RecordBST {
       }
       Node temp = findMin(node.right);
       node.record = temp.record;
-      node.right = removeHelper(node.right, temp.record);
+      node.right = removeR(node.right, temp.record);
     }
     return node;
   }
@@ -58,33 +71,33 @@ public class RecordBST {
   }
 
   public boolean search(Record record) {
-    return searchHelper(this.record, record);
+    return searchR(this.record, record);
   }
 
-  private boolean searchHelper(Node node, Record record) {
+  private boolean searchR(Node node, Record record) {
     if (node == null) {
       return false;
     }
     int cmp = record.compareTo(node.record);
     if (cmp < 0) {
-      return searchHelper(node.left, record);
+      return searchR(node.left, record);
     } else if (cmp > 0) {
-      return searchHelper(node.right, record);
+      return searchR(node.right, record);
     } else {
       return true;
     }
   }
 
   public void getHeight() {
-    System.out.println(getHeightHelper(this.record));
+    System.out.println(getHeightR(this.record));
   }
 
-  private int getHeightHelper(Node node) {
+  private int getHeightR(Node node) {
     if (node == null) {
       return -1;
     }
-    int leftHeight = getHeightHelper(node.left);
-    int rightHeight = getHeightHelper(node.right);
+    int leftHeight = getHeightR(node.left);
+    int rightHeight = getHeightR(node.right);
     return Math.max(leftHeight, rightHeight) + 1;
   }
 
@@ -114,14 +127,14 @@ public class RecordBST {
   }
 
   public void print() {
-    printHelper(this.record);
+    printR(this.record);
   }
 
-  private void printHelper(Node node) {
+  private void printR(Node node) {
     if (node != null) {
-      printHelper(node.left);
+      printR(node.left);
       System.out.println(node.record);
-      printHelper(node.right);
+      printR(node.right);
     }
   }
 }

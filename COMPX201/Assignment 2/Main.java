@@ -23,9 +23,6 @@ public class Main {
 
     System.out.println(bst.search(record1)); // true
     System.out.println(bst.search(record4)); // true
-    System.out.println(
-        bst.search(new Record("Rock", 1990, "Nirvana", "Smells Like Teen Spirit"))); // true
-    System.out.println(
-        bst.search(new Record("Rock", 1990, "Nirvana", "Smells Like Teen Spirit "))); // false
+    System.out.println(bst.search(record1));
   }
 }

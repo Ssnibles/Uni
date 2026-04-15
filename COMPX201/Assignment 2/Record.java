@@ -39,10 +39,7 @@ public class Record {
     return String.format("%s, %s, %s, %s", genre, year, artist, title);
   }
 
-  /**
-   * Method to compare this record with another record. Returns "after" if this record is the same
-   * as the other record, "before" if this record is different from the other record.
-   */
+  /** Compare this record to another record */
   public int compareTo(Record other) {
     int genreCompare = this.genre.compareTo(other.genre);
     if (genreCompare != 0) {
