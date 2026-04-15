@@ -42,6 +42,7 @@ public class Record {
   /** Compare this record to another record */
   public int compareTo(Record other) {
     int genreCompare = this.genre.compareTo(other.genre);
+    // If genres are different, return the comparison result
     if (genreCompare != 0) {
       return genreCompare;
     }
